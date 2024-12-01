@@ -15,7 +15,6 @@ class Objeto {
 
 public class Mochila01 {
 
-    // Função para imprimir a matriz progDinam
     public static void imprimirMatriz(int[][] matriz, int n, int capacidade) {
         System.out.println("\nMatriz progDinam (valores máximos possíveis):");
         for (int i = 0; i <= n; i++) {
