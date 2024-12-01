@@ -1,0 +1,36 @@
+Função resolverMochila(capacidade, objetos):
+    Inicialize n como o número de objetos
+    Crie uma matriz progDinam de tamanho (n + 1) x (capacidade + 1) e preencha com 0
+    Crie uma matriz incluso de booleanos de tamanho (n + 1) x (capacidade + 1)
+
+    Para cada objeto i de 1 até n:
+        Para cada capacidade w de 1 até capacidade:
+            Obtenha o objeto atual obj = objetos[i - 1]
+            Se obj.peso <= w:
+                Se progDinam[i - 1][w] < obj.valor + progDinam[i - 1][w - obj.peso]:
+                    Defina progDinam[i][w] como obj.valor + progDinam[i - 1][w - obj.peso]
+                    Marque incluso[i][w] como verdadeiro
+                Caso contrário:
+                    Copie o valor anterior: progDinam[i][w] = progDinam[i - 1][w]
+            Caso contrário:
+                Copie o valor anterior: progDinam[i][w] = progDinam[i - 1][w]
+    
+    ImprimirMatriz(progDinam, n, capacidade)
+
+    Inicialize uma lista vazia resultado
+    Defina w como capacidade
+
+    Para cada objeto i de n até 1:
+        Se incluso[i][w] for verdadeiro:
+            Adicione objetos[i - 1].nome à lista resultado
+            Reduza a capacidade restante: w = w - objetos[i - 1].peso
+
+    Retorne a lista resultado
+Fim da função
+
+Função ImprimirMatriz(matriz, n, capacidade):
+    Para cada i de 0 até n:
+        Para cada w de 0 até capacidade:
+            Exiba matriz[i][w] 
+        Pule para a próxima linha
+Fim da função
