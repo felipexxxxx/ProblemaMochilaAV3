@@ -35,6 +35,11 @@ O projeto imprime a matriz completa de programação dinâmica para facilitar o 
 3. Compile e execute a classe Main.java.
 4. O programa irá exibir a matriz de valores máximos e a lista dos objetos selecionados para a mochila.
 
+---
+
+## **Conclusão**
+Este projeto ilustra de forma clara e didática a aplicação de programação dinâmica para resolver problemas de otimização combinatória, mostrando como utilizar matrizes para calcular a melhor combinação de itens para um espaço limitado.
+
 
 
 
